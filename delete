@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+git branch --delete $1
+git branch
