@@ -19,5 +19,10 @@ This repository contains my personal bin utility scripts from ~/bin
 
 ### My Docker Helpers
 
-- purge-images - purges images to save space locally (run this regularly or your drive will fill up)
+#### purge-images
+
+- requires no arguments
+- purges images to save space locally
+
+Note: run this regularly or your drive will fill up
 
