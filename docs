@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 # Check the number of arguments
 if [[ $# -eq 1 ]]; then
@@ -8,5 +8,5 @@ else
   exit 1
 fi
 
-# Call the "in" script with the modified commit message
-in "$commitMsg"
+# Call the "up" script with the modified commit message
+up "${commitMsg}"

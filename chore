@@ -8,5 +8,5 @@ else
   exit 1
 fi
 
-# Call the "in" script with the modified commit message
-in "$commitMsg"
+# Call the "up" script with the modified commit message
+up "${commitMsg}"

@@ -3,13 +3,13 @@
 # Check the number of arguments
 if [[ $# -eq 1 ]]; then
   commitMsg="$1"
-  echo "The commit message is '$commitMsg'"
+  echo "The commit message is '${commitMsg}'"
 else
   echo "Usage: $0 \"commit message\""
   exit 1
 fi
 
 git add .
-git commit -m "$commitMsg"
+git commit -m "${commitMsg}"
 git push
 
