@@ -9,4 +9,4 @@ else
 fi
 
 # Call the "in" script with the modified commit message
-./in "$commitMsg"
+in "$commitMsg"
