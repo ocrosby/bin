@@ -4,6 +4,10 @@
 
 This repository contains my personal bin utility scripts from ~/bin
 
+## Table of Contents
+
+- [purge-images](#purge-images)
+
 ### My Git Helpers
 
 - in - performs a `git add .` followed by a `git commit -m <commit-message>` and a `git push` where <commit-message> is the first arg passed please double quote it 
