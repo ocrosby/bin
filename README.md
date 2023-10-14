@@ -11,6 +11,10 @@ This repository contains my personal bin utility scripts from ~/bin
 
 ## My Git Helpers
 
+### status
+- requires no arguments
+- executes `git status`
+
 ### in
 - requires a single double quoted argument
 - executes `git add .`

@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env sh
 
 # Check the number of arguments
 if [[ $# -eq 1 ]]; then
