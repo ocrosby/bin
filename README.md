@@ -9,6 +9,36 @@ This repository contains my personal bin utility scripts from ~/bin
 - [purge-images](#purge-images)
 
 
+## Usage
+
+### fix commit with a scope
+
+```shell
+git add .
+git commit -m "fix(myscope): my message"
+git push
+```
+
+becomes
+
+```shell
+fix "my message" myscope
+```
+
+### fix commit without a scope
+
+```shell
+git add .
+git commit -m "fix: my message"
+git push
+```
+
+becomes
+
+```shell
+fix "my message"
+```
+
 ## My Git Helpers
 
 ### status
