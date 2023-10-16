@@ -8,6 +8,18 @@ This repository contains my personal bin utility scripts from ~/bin
 
 - [purge-images](#purge-images)
 
+## Setup
+
+```shell
+# Change to your home directory
+cd ~/
+
+# Clone the repsitory to your home directory
+git clone https://github.com/ocrosby/bin.git
+
+# Add all of the helper directories to your path (preferably do this in .zshrc or .bashrc etc...)
+export PATH=~/bin/git:~/bin/conventional:~/bin/docker:$PATH
+```
 
 ## Usage
 
