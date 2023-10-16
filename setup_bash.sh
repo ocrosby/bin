@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Directory where the scripts will be installed
 INSTALL_DIR="$HOME/bin"

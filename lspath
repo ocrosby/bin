@@ -1,0 +1,13 @@
+#!/usr/bin/env zsh
+
+# Define your PATH-like string
+path_string="$PATH"
+
+# Split the path_string on ':' and iterate over components
+IFS=":" read -A path_components <<< "$path_string"
+
+echo "Path components:"
+for component in "${path_components[@]}"; do
+  echo "$component"
+done
+

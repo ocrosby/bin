@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh 
 
 # Directory where the scripts will be installed
 INSTALL_DIR="$HOME/bin"
