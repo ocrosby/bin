@@ -3,8 +3,10 @@
 # Check the number of arguments
 if [[ $# -eq 1 ]]; then
   commitMsg="chore: $1"
+elif [[ $# -eq 2 ]]; then
+  commitMsg="chore($2): $1"
 else
-  echo "Usage: $0 \"commit message\""
+  echo "Usage: $0 \"commit message\" [scope]"
   exit 1
 fi
 
