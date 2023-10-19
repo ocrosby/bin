@@ -9,6 +9,16 @@ else
   exit 1
 fi
 
+# Check if you are in a Git repository
+if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+    # Get the current branch name
+    branch_name=$(git rev-parse --abbrev-ref HEAD)
+    echo "Current branch: $branch_name"
+else
+    echo "not in a Git repository."
+    exit 2
+fi
+
 git add .
 git commit -m "${commitMsg}"
 git push
