@@ -15,20 +15,20 @@ if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
     branch_name=$(git rev-parse --abbrev-ref HEAD)
     echo "Current branch: $branch_name"
 
-    # Use regex to extrac tte desired part of the branch name
-    if [[ $branch_name =~ .*/(PICAP|CLOUDOPS)-[0-9]+ ]]; then
-        story="${match[1]}"
-        echo "Story: $story"
 
-        # Append [$story] to the end fo the commit message if story is not empty
-        if [[ -n $story ]]; then
+    if echo "$branch_name" | grep -q -E ".*\/(PICAP|CLOUDOPS)-[0-9]+"; then
+        story=$(echo "$branch_name" | sed -E -n 's/.*\/(PICAP|CLOUDOPS)-([0-9]+).*/\1-\2/p')
+        if [ -n "$story" ]; then
+            echo "Story number: $story"
+            
             echo "Uncomment this after you have validate the story name is getting outputted successfully."
             # commitMsg="$commitMsg [$story]"
             exit 0
         fi
+        
     else
       # Don't do anything special with the story suffix.
-      echo "Branch name does not match the story pattern."
+      echo "Branch name '$branch_name' does not match the story pattern."
     fi
 else
     echo "not in a Git repository."
