@@ -3,7 +3,6 @@
 # Check the number of arguments
 if [[ $# -eq 1 ]]; then
   commitMsg="$1"
-  echo "The commit message is '${commitMsg}'"
 else
   echo "Usage: $0 \"commit message\""
   exit 1
@@ -21,8 +20,7 @@ if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
         if [ -n "$story" ]; then
             echo "Story number: $story"
             
-            echo "Uncomment this after you have validate the story name is getting outputted successfully."
-            # commitMsg="$commitMsg [$story]"
+            commitMsg="$commitMsg [$story]"
             exit 0
         fi
         
@@ -34,6 +32,8 @@ else
     echo "not in a Git repository."
     exit 2
 fi
+
+echo "The commit message is '${commitMsg}'"
 
 git add .
 git commit -m "${commitMsg}"
