@@ -17,10 +17,10 @@ if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
 
     # Use regex to extrac tte desired part of the branch name
     if [[ $branch_name =~ feature(PICAP|CLOUDOPS)-[0-9]+ ]]; then
-        extracted_part="${match[1]}"
-        echo "Extracted part: $extracted_part"
+        story="${match[1]}"
+        echo "Story: $story"
     else
-      echo "Branch name does not match the special pattern."
+      echo "Branch name does not match the story pattern."
     fi
 else
     echo "not in a Git repository."
