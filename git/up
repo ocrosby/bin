@@ -37,4 +37,4 @@ echo "The commit message is '${commitMsg}'"
 git add .
 git commit -m "${commitMsg}"
 git push
-
+git status
