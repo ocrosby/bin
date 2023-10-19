@@ -24,6 +24,7 @@ if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
         if [[ -n $story ]]; then
             echo "Uncomment this after you have validate the story name is getting outputted successfully."
             # commitMsg="$commitMsg [$story]"
+            exit 0
         fi
     else
       # Don't do anything special with the story suffix.
